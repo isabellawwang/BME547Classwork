@@ -42,10 +42,10 @@ def LDL_driver():
     output_LDL_result(LDL_value, LDL_characterization)
 
 def interface():
-    print("Blood Calculator")
-    print("Options:")
-    print("1 - Analyze HDL")
-    print("2 - Analyze LDL")
+    print("Welcome to the Blood Calculator!")
+    print("Here are your options:")
+    print("1 - Analyze HDL") # Run HDL Driver
+    print("2 - Analyze LDL") # Run LDL Driver
     print("9 = Quit")
     keep_running = True
     while keep_running:
@@ -53,9 +53,9 @@ def interface():
         if choice == "9":
             keep_running = False # optional, you could not include this 
             return
-        elif choice == "1":
+        elif choice == "1": # HDL
             HDL_driver()
-        elif choice == "2":
+        elif choice == "2": # LDL
             LDL_driver()
 
 interface()
