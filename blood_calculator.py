@@ -1,4 +1,7 @@
-# note: accidentally named branch for this "HRL" insted of "HDL"
+# BME 547 Lecture 3
+# September 5, 2022
+# Author: Dr. David Ward; Isabella Wang
+
 def input_HDL():
     user_HDL = input("Enter the HDL value: ")
     return int(user_HDL) # convert string into integer so you can better work with it later
