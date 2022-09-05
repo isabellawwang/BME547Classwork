@@ -44,11 +44,34 @@ def LDL_driver():
     LDL_characterization = check_LDL(LDL_value)
     output_LDL_result(LDL_value, LDL_characterization)
 
+def input_total_chol():
+    my_HDL = input("Enter the HDL value: ")
+    my_LDL = input("Enter the LDL value: ")
+    sum = int(my_HDL) + int(my_LDL)
+    return sum
+
+def check_total_chol(total):
+    if total < 200:
+        return "Normal"
+    elif total <= 239:
+        return "Borderline High"
+    else:
+        return "High"
+
+def output_total_chol(chol_sum, chol_charac):
+    print("The result for LDL + HDL = {} is {}.".format(chol_sum, chol_charac))
+
+def total_chol_driver():
+    total_value = input_total_chol()
+    total_charac = check_total_chol(total_value)
+    output_total_chol(total_value, total_charac)
+
 def interface():
     print("Welcome to the Blood Calculator!")
     print("Here are your options:")
     print("1 - Analyze HDL") # Run HDL Driver
     print("2 - Analyze LDL") # Run LDL Driver
+    print("3 - Estimate total cholesterol (HDL + LDL)")
     print("9 = Quit")
     keep_running = True
     while keep_running:
@@ -60,5 +83,7 @@ def interface():
             HDL_driver()
         elif choice == "2": # LDL
             LDL_driver()
+        elif choice == "3": # Estimate total (HDL + LDL)
+            total_chol_driver()
 
 interface()
