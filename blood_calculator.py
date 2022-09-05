@@ -2,6 +2,9 @@
 # September 5, 2022
 # Author: Dr. David Ward; Isabella Wang
 
+from msilib import MSIMODIFY_VALIDATE_DELETE
+
+
 def input_HDL():
     user_HDL = input("Enter the HDL value: ")
     return int(user_HDL) # convert string into integer so you can better work with it later
@@ -43,6 +46,12 @@ def LDL_driver():
     LDL_value = input_LDL()
     LDL_characterization = check_LDL(LDL_value)
     output_LDL_result(LDL_value, LDL_characterization)
+
+def input_total_chol():
+    my_HDL = input("Enter the HDL value: ")
+    my_LDL = input("Enter the LDL value: ")
+    sum = int(my_HDL) + int(my_LDL)
+    return sum
 
 def interface():
     print("Welcome to the Blood Calculator!")
