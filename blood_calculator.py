@@ -21,5 +21,13 @@ def check_HDL(HDL):
         return "Borderline Low"
     else:
         return "Low"
-    
+
+def HDL_driver(): # driver calls other functions and moves variables in between them
+    HDL_value = input_HDL()
+    HDL_characterization = check_HDL(HDL_value)
+    output_HDL_result(hdl_value, answer)
+
+def output_HDL_result(hdl_value, charac):
+    print("The results for an HSL value of {} is {}".format(hdl_value, charac))
+
 interface()
