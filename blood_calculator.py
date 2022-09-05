@@ -2,9 +2,6 @@
 # September 5, 2022
 # Author: Dr. David Ward; Isabella Wang
 
-from msilib import MSIMODIFY_VALIDATE_DELETE
-
-
 def input_HDL():
     user_HDL = input("Enter the HDL value: ")
     return int(user_HDL) # convert string into integer so you can better work with it later
