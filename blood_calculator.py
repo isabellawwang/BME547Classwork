@@ -53,6 +53,14 @@ def input_total_chol():
     sum = int(my_HDL) + int(my_LDL)
     return sum
 
+def check_total_chol(total):
+    if total < 200:
+        return "Normal"
+    elif total <= 239:
+        return "Borderline High"
+    else:
+        return "High"
+
 def interface():
     print("Welcome to the Blood Calculator!")
     print("Here are your options:")
