@@ -61,6 +61,14 @@ def check_total_chol(total):
     else:
         return "High"
 
+def output_total_chol(chol_sum, chol_charac):
+    print("The result for LDL + HDL = {} is {}.".format(chol_sum, chol_charac))
+
+def total_chol_driver():
+    total_value = input_total_chol()
+    total_charac = check_total_chol()
+    output_total_chol(total_value, total_charac)
+
 def interface():
     print("Welcome to the Blood Calculator!")
     print("Here are your options:")
