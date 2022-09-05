@@ -33,6 +33,14 @@ def check_LDL(LDL):
     else:
         return "Very High"
 
+def output_LDL_result(ldl_value, ldl_charac):
+    print("The result for an LSL value of {} is {}.".format(ldl_value, ldl_charac))
+
+def LDL_driver():
+    LDL_value = input_LDL()
+    LDL_characterization = check_LDL(LDL_value)
+    output_LDL_result(LDL_value, LDL_characterization)
+
 def interface():
     print("Blood Calculator")
     print("Options:")
