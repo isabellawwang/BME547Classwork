@@ -63,7 +63,7 @@ def output_total_chol(chol_sum, chol_charac):
 
 def total_chol_driver():
     total_value = input_total_chol()
-    total_charac = check_total_chol()
+    total_charac = check_total_chol(total_value)
     output_total_chol(total_value, total_charac)
 
 def interface():
