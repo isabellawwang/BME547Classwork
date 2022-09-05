@@ -1,14 +1,3 @@
-def interface():
-    print("Blood Calculator")
-    print("Options:")
-    print("9 = Quit")
-    keep_running = True
-    while keep_running:
-        choice = input("Enter choice: ")
-        if choice == "9":
-            keep_running = False # optional, you could not include this 
-            return
-
 # note: accidentally named branch for this "HRL" insted of "HDL"
 def input_HDL():
     user_HDL = input("Enter the HDL value: ")
@@ -22,12 +11,26 @@ def check_HDL(HDL):
     else:
         return "Low"
 
+def output_HDL_result(hdl_value, charac):
+    print("The results for an HSL value of {} is {}".format(hdl_value, charac))
+
 def HDL_driver(): # driver calls other functions and moves variables in between them
     HDL_value = input_HDL()
     HDL_characterization = check_HDL(HDL_value)
-    output_HDL_result(hdl_value, answer)
+    output_HDL_result(HDL_value, HDL_characterization)
 
-def output_HDL_result(hdl_value, charac):
-    print("The results for an HSL value of {} is {}".format(hdl_value, charac))
+def interface():
+    print("Blood Calculator")
+    print("Options:")
+    print("1 - Analyze HDL")
+    print("9 = Quit")
+    keep_running = True
+    while keep_running:
+        choice = input("Enter choice: ")
+        if choice == "9":
+            keep_running = False # optional, you could not include this 
+            return
+        elif choice == "1":
+            HDL_driver()
 
 interface()
