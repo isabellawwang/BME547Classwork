@@ -11,18 +11,23 @@ def check_HDL(HDL):
     else:
         return "Low"
 
-def output_HDL_result(hdl_value, charac):
-    print("The results for an HSL value of {} is {}".format(hdl_value, charac))
+def output_HDL_result(hdl_value, hdl_charac):
+    print("The result for an HDL value of {} is {}".format(hdl_value, hdl_charac))
 
 def HDL_driver(): # driver calls other functions and moves variables in between them
     HDL_value = input_HDL()
     HDL_characterization = check_HDL(HDL_value)
     output_HDL_result(HDL_value, HDL_characterization)
 
+def input_LDL():
+    user_LDL = input("Enter the LDL value: ")
+    return int(user_LDL)
+
 def interface():
     print("Blood Calculator")
     print("Options:")
     print("1 - Analyze HDL")
+    print("2 - Analyze LDL")
     print("9 = Quit")
     keep_running = True
     while keep_running:
@@ -32,5 +37,7 @@ def interface():
             return
         elif choice == "1":
             HDL_driver()
+        elif choice == "2":
+            LDL_driver()
 
 interface()
