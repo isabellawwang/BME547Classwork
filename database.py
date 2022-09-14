@@ -58,6 +58,9 @@ def main():
     
     for i, patient in enumerate(db): # i = which index I'm on
         print("Name = {}, Room = {}".format(patient[0], room_list[i]))
+    
+    for patient, room in zip(db, room_list):
+        print("Name = {}, Room = {}".format(patient[0], room))
 
 if __name__ == "__main__":
     main()
