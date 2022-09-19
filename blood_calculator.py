@@ -86,4 +86,5 @@ def interface():
         elif choice == "3": # Estimate total (HDL + LDL)
             total_chol_driver()
 
-interface()
+if __name__ == "__main__":
+    interface()
