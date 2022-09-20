@@ -12,3 +12,4 @@ def test_check_HDL(test_value, expected_output):
 
 # Homework: do something similar for the check_LDL function and the check_total function!
 
+# Starting with the next assignment, all code should follow PEP8 styleguide and have pytest
