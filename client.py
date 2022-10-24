@@ -16,9 +16,14 @@ print(r.status_code)
 print(r.text) """
 
 
-out_data_2 = {"a": 3,
-              "b": 7}
+out_data_2 = {"c": 3,
+              "d": 7}
 r_2 = requests.post("http://127.0.0.1:5000/add_numbers",
                     json=out_data_2)
 print(r_2.status_code)
 print(r_2.text)
+
+
+r = requests.get("http://127.0.0.1:5000/add/2/3")
+print(r.status_code)
+print(r.text)
