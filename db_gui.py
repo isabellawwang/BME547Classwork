@@ -15,7 +15,7 @@ def main_window():
                                         rh_button.get()))
         print("Donation Center: {}".format(donor_center.get()))
         print("Clicked Ok button")
-    
+
     def cancel_cmd():
         root.destroy()
 
@@ -54,7 +54,7 @@ def main_window():
                     variable=rh_button,
                     onvalue="+",
                     offvalue="-").grid(column=1, row=4)
-    
+
     ttk.Label(root, text="Closest Donation Center").grid(column=2, row=0)
     donor_center = tk.StringVar()
     donor_center_combo = ttk.Combobox(root, textvariable=donor_center)
@@ -68,6 +68,7 @@ def main_window():
     other_button.grid(column=2, row=7)
 
     root.mainloop()
+
 
 if __name__ == '__main__':
     main_window()
